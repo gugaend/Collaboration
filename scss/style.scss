@@ -1,0 +1,19 @@
+@use 'abstracts/variables.scss' as *;
+@use 'header';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  overflow-x: hidden;
+}
+
+// .header_container {
+//   max-width: 1240px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
