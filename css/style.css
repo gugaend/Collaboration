@@ -429,6 +429,145 @@
   }
 }
 
+.about {
+  text-align: center;
+}
+.about_header {
+  margin-bottom: 26px;
+}
+.about_header .about_title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #183B56;
+  margin-bottom: 26px;
+}
+.about_header .about_text {
+  font-size: 16px;
+  color: #000000;
+  max-width: 272px;
+  margin: 0 auto;
+}
+.about_grid {
+  display: flex;
+  flex-direction: column;
+  gap: 55.18px;
+  align-items: center;
+  padding: 0 28px;
+}
+.about_card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 1.42px 2.85px 27.04px 0px rgba(0, 0, 0, 0.0784313725);
+  width: 264px;
+  height: 243px;
+  margin-top: 26px;
+}
+.about_card .card_decoration_circle {
+  display: none;
+}
+.about_card .icon_wrapper {
+  position: relative;
+  width: 50.52px;
+  height: 50.52px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about_card .icon_wrapper .icon_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #052A44;
+  border-radius: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.about_card .icon_wrapper .card_icon {
+  position: absolute;
+  z-index: 2;
+  width: 16.67px;
+  height: 23.24px;
+  transform: translateY(-100%);
+}
+.about_card h3 {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 10.67px;
+  font-weight: 600;
+}
+.about_card p {
+  font-size: 16px;
+  color: #071210;
+  font-weight: 400;
+}
+.about_action {
+  margin-top: 26px;
+}
+.about_action .btn_get_started {
+  width: 105px;
+  height: 37px;
+  border: 1px solid #2F327D;
+  background: #052A44;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .about_header {
+    margin-bottom: 40px;
+    margin-top: 80px;
+  }
+  .about_header .about_title {
+    font-size: 42px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 16px;
+  }
+  .about_header .about_text {
+    font-size: 18px;
+    color: #000000;
+    max-width: 1034px;
+    margin: 0 auto;
+  }
+  .about_grid {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+  }
+  .about_card {
+    flex: 1;
+  }
+  .about_card .card_decoration_circle {
+    display: block;
+    position: absolute;
+    width: 129.81px;
+    height: 129.81px;
+    border: 5.96px solid #052A44;
+    border-radius: 50%;
+    top: 1050px;
+    left: 5px;
+    z-index: -1;
+  }
+}
+.about_action {
+  margin-top: 60px;
+}
+.about_action .btn_get_started {
+  width: 176px;
+  height: 54px;
+  border: 1px solid #2F327D;
+  background: #052A44;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
