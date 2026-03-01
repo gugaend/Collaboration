@@ -1,0 +1,362 @@
+@use 'abstracts/variables' as *;
+
+.hero {
+    padding: 40px 0;
+    text-align: center;
+
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    &_content {
+        .hero_title {
+            display: none;
+        }
+
+        .hero_title_mobile {
+            font-size: 32px;
+            font-weight: $font-weight-normal;
+            color: $color-blue-2;
+            line-height: 40px;
+            letter-spacing: 0.2 px;
+        }
+
+        .hero_text {
+            font-size: 16px;
+            color: #000000;
+            margin: 14px 0;
+            line-height: 28px;
+            letter-spacing: 0;
+            padding: 0 24px;
+        }
+    }
+
+    &_btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+
+        .btn_get {
+            background-color: $color-blue-1;
+            color: $color-button-fg;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            width: 105px;
+            height: 37px;
+
+        }
+
+        .btn_play {
+            background: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #000000;
+
+            img {
+                width: 17px;
+            }
+        }
+    }
+
+    &_users {
+        display: none;
+    }
+
+    &_img_block {
+        position: relative;
+        margin-top: 24px;
+        width: 252px;
+        height: 231px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 217.57px;
+            height: 175.43px;
+            background-color: $color-yellow;
+            top: 25.8px;
+            left: 35.26px;
+            border-radius: 8.6px;
+            z-index: 1;
+        }
+
+        .main_hero_img {
+            width: 181.02px;
+            height: 200.37px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            left: 35px;
+            z-index: 2;
+        }
+
+        .stat_card {
+            position: absolute;
+            background: #fff;
+            border-radius: 6.22px;
+            box-shadow: 0.78px 1.55px 14.76px 0px #00000014;
+            z-index: 5;
+            padding: 3.89px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            p {
+                font-size: 5.54px;
+                font-weight: 700;
+                color: #1E2A39;
+                margin: 0;
+            }
+
+            span {
+                font-size: 4.43px;
+                color: #2E2E2E;
+            }
+
+
+            img {
+                width: 12.99px;
+                height: 12.97px;
+                display: block;
+            }
+
+            .member_icons {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 9.71px;
+                    height: 9.71px;
+                    border-radius: 50%;
+                    margin-left: -5px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        .card_happy {
+            width: 61.49px;
+            height: 45.58px;
+            top: 15%;
+            left: 2%;
+        }
+
+        .card_members {
+            width: 61.92px;
+            height: 48.16px;
+            top: 39%;
+            left: 2%;
+        }
+
+        .card_joined {
+            width: 61.92px;
+            height: 48.16px;
+            bottom: 16%;
+            left: 2%;
+        }
+    }
+
+    // desktop version
+    @media (min-width: 768px) {
+        padding: 80px 0;
+        text-align: left;
+
+        &_wrapper {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        &_content {
+            flex: 1;
+            padding-right: 50px;
+
+            .hero_title_mobile {
+                display: none;
+            }
+
+            .hero_title {
+                display: block;
+                font-size: 48px;
+                color: #000000;
+
+                span {
+                    color: $color-yellow;
+                }
+            }
+
+
+            .hero_text {
+                padding: 0;
+                max-width: 579px;
+                font-size: 18px;
+            }
+        }
+
+        &_btns {
+            justify-content: flex-start;
+            gap: 42px;
+
+            .btn_get {
+                width: 179px;
+                height: 54px;
+                padding: 15px 43px;
+                font-size: 16px;
+                border-radius: 8px;
+            }
+
+            .btn_play {
+                font-size: 16px;
+                color: #000000;
+                font-style: bold;
+                font-weight: 600;
+
+                img {
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+
+        &_users {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 24px;
+            gap: 12px;
+
+            .user_avatars {
+                display: flex;
+
+                img {
+                    width: 52.35px;
+                    margin-left: -20px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 13.09px;
+                color: #000000;
+            }
+        }
+
+        &_img_block {
+            flex: 1;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 506px;
+                height: 408px;
+                border-radius: 20px;
+                top: -60px;
+                left: 80px;
+                z-index: 1;
+            }
+
+            .main_hero_img {
+                position: relative;
+                z-index: 2;
+                width: 421px;
+                height: 466px;
+                top: -120px;
+                left: 80px;
+            }
+
+            .stat_card {
+                position: absolute;
+                border-radius: 13.74px;
+                box-shadow: 1.72px 3.43px 32.62px 0px #00000014;
+                z-index: 5;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+
+                p {
+                    font-size: 12.88px;
+                    font-weight: 700;
+                    color: #1E2A39;
+                }
+
+                span {
+                    font-size: 10.3px;
+                    color: #2E2E2E;
+                }
+
+                img {
+                    width: 22.59px;
+                    height: 22.59px;
+                    display: block;
+                }
+
+                .member_icons {
+                    display: flex;
+                    justify-content: center;
+                    box-sizing: border-box;
+
+
+                    img {
+                        width: 22.59px;
+                        height: 22.59px;
+                        border-radius: 50%;
+                        margin-left: -5px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .card_happy {
+                width: 143px;
+                height: 106px;
+                top: -15%;
+                left: 2%;
+            }
+
+            .card_members {
+                width: 144px;
+                height: 112px;
+                top: 39%;
+                left: 2%;
+            }
+
+            .card_joined {
+                width: 144px;
+                height: 112px;
+                bottom: -45%;
+                left: 2%;
+            }
+        }
+    }
+}

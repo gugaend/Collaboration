@@ -1,5 +1,6 @@
 @use 'abstracts/variables.scss' as *;
 @use 'header';
+@use 'hero';
 
 * {
   margin: 0;
@@ -12,8 +13,3 @@ body {
   overflow-x: hidden;
 }
 
-// .header_container {
-//   max-width: 1240px;
-//   margin: 0 auto;
-//   padding: 0 20px;
-// }
